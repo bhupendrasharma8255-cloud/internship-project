@@ -231,7 +231,7 @@ These files are loaded directly by **app.py** for prediction without retraining 
 
 ## 👨‍💻 Author
 
-**Manas Sharma**
+**Bhupendra Sharma**
 
 Engineering Student
 
