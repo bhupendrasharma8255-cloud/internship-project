@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1> RESULT </h1>
+     
+</header>
+
+<div class="result-card">
+
+    {% if "Fraudulent" in prediction %}
+
+        <div class="status-icon danger">⚠</div>
+
+        <h2 class="danger-text">Fraudulent Transaction</h2>
+
+        <p class="description">
+            This transaction shows suspicious characteristics and has been
+            classified as <strong>Fraudulent</strong> by the K-Means model.
+        </p>
+
+    {% else %}
+
+        <div class="status-icon success">✔</div>
+
+        <h2 class="success-text">Genuine Transaction</h2>
+
+        <p class="description">
+            This transaction appears to be normal and has been
+            classified as <strong>Genuine</strong>.
+        </p>
+
+    {% endif %}
+
+    <a href="/">Analyze Another Transaction</a>
+
+</div>
+
+</body>
+</html>

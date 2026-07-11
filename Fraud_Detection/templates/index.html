@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Fraud Detection</title>
+</head>
+<body>
+<header>
+    <h1>💳 Fraud Detection System</h1>
+    <p>K-Means Machine Learning Based Fraud Prediction</p>
+</header>
+
+<div class="container">
+
+<form action="/predict" method="POST">
+
+<div class="form-group">
+<label>Transaction Amount</label>
+<input type="number" name="Amount" step="0.01" required>
+</div>
+
+<div class="form-group">
+<label>Transaction Hour</label>
+<input type="number" name="Hour" min="0" max="23" required>
+</div>
+
+<div class="form-group">
+<label>Distance (km)</label>
+<input type="number" name="Distance_km" step="0.01" required>
+</div>
+
+<div class="form-group">
+<label>Device Score</label>
+<input type="number" name="Device_Score" min="0" max="100" required>
+</div>
+
+<div class="form-group">
+<label>Daily Transactions</label>
+<input type="number" name="Daily_Transactions" required>
+</div>
+
+<div class="form-group">
+<label>Failed Login Attempts</label>
+<input type="number" name="Failed_Logins" required>
+</div>
+
+<div class="form-group">
+<label>International</label>
+<select name="International">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Weekend</label>
+<select name="Weekend">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</select>
+</div>
+
+<div class="form-group full">
+<label>Account Age (Months)</label>
+<input type="number" name="Account_Age_Months" required>
+</div>
+
+<button type="submit">Predict Transaction</button>
+
+</form>
+
+</div>
+</body>
+</html>
