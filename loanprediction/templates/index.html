@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleloan.css') }}">
+</head>
+<body>
+    <h1>Loan Risk Prediction</h1>
+    <form action="/predict" method="POST">
+        <label>Age:</label><br>
+        <input type="number" name="person_age" step="any" required><br><br>
+
+        <label>Annual Income:</label><br>
+        <input type="number" name="person_income" step="any" required><br><br>
+
+        <label>Home Ownership (0=Mortgage, 1=Other, 2=Own, 3=Rent):</label><br>
+        <input type="number" name="person_home_ownership" min="0" max="3" required><br><br>
+
+        <label>Years of Employment:</label><br>
+        <input type="number" name="person_emp_length" step="any" required><br><br>
+
+        <label>Loan Intent (0-5, depends on category):</label><br>
+        <input type="number" name="loan_intent" min="0" max="5" required><br><br>
+
+        <label>Loan Grade (0=A, 1=B, 2=C, 3=D, 4=E, 5=F, 6=G):</label><br>
+        <input type="number" name="loan_grade" min="0" max="6" required><br><br>
+
+        <label>Loan Amount:</label><br>
+        <input type="number" name="loan_amnt" step="any" required><br><br>
+
+        <label>Loan Interest Rate:</label><br>
+        <input type="number" name="loan_int_rate" step="any" required><br><br>
+
+        <label>Loan Percent of Income:</label><br>
+        <input type="number" name="loan_percent_income" step="any" required><br><br>
+
+        <label>Default on File (0=No, 1=Yes):</label><br>
+        <input type="number" name="cb_person_default_on_file" min="0" max="1" required><br><br>
+
+        <label>Credit History Length (years):</label><br>
+        <input type="number" name="cb_person_cred_hist_length" step="any" required><br><br>
+
+        <button class="btn" type="submit">Predict Risk</button>
+    </form>
+</body>
