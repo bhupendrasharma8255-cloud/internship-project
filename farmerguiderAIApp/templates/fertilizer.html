@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Fertilizer Predict</title>
+</head>
+<body>
+    <h2>Fertilizer Prediction
+
+    </h2>
+    <form action="{{ url_for('fertilizer_predict') }}" method="POST">
+        <label>Temperature:</label>
+        <input type="number" name="temperature" step="0.1" required><br><br>
+        <label>Moisture:</label>
+        <input type="number" name="moisture" step="0.1" required><br><br>
+        <label>Rainfall:</label>
+        <input type="number" name="rainfall" step="0.1" required><br><br>
+        <label>PH:</label>
+        <input type="number" name="ph" step="0.1" required><br><br>
+        <label>Nitrogen:</label>
+        <input type="number" name="nitrogen" step="0.1" required><br><br>
+        <label>Phosphorus:</label>
+        <input type="number" name="phosphorus" step="0.1" required><br><br>
+        <label>Potassium:</label>
+        <input type="number" name="potassium" step="0.1" required><br><br>
+        <label>Carbon:</label>
+        <input type="number" name="carbon" step="0.1" required><br><br>
+        <label>Soil Type:</label>
+        <select name="soil" required>
+    <option value="">-- Select Soil Type --</option>
+    <option value="Acidic Soil">Acidic Soil</option>
+    <option value="Peaty Soil">Peaty Soil</option>
+    <option value="Neutral Soil">Neutral Soil</option>
+    <option value="Loamy Soil">Loamy Soil</option>
+    <option value="Alkaline Soil">Alkaline Soil</option>
+    </select><br><br>
+        
+        <label>Crop:</label>
+        <input type="text" name="crop" required><br><br>
+
+        <button type="submit">Predict Fertilizer</button>
+
+    </form>
+
+
+
+    
+
+    
+</body>
+</html>

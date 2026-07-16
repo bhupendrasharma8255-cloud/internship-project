@@ -1,0 +1,35 @@
+container {
+    max-width: 800px;
+    margin: 30px;
+    border: 10px;
+    background-color: whitesmoke;
+    size: 20px;
+    border-radius: 20px;
+    border-color:  red;
+}
+button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    align-button: center;
+
+}
+button:hover {
+    transition: background-color 0.3s ease;
+    background-color: green;
+
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgreen;
+    margin: 100px;
+    padding: 50px;
+    align-button: center;   
+    background-image : url("https://imgs.search.brave.com/L0s1zWn2uIzNsS358M112j4WbIh2_jI37uV7Ok6we88/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjIw/NjY3MDU0MS9waG90/by9ydXJhbC1pbmRp/YW4tZmFybWVyLWNh/cnJ5aW5nLWEtaG9l/LW9uLXRoZS1zaG91/bGRlci1zdGFuZGlu/Zy1pbi1hZ3JpY3Vs/dHVyZS13aGVhdC1m/YXJtLWFuZC5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9WjRD/NENMNmQxdldkMU9u/ZllMbWhla0RXOVNW/S0N2cTVjdU9rNm1j/aHl1ND0");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
